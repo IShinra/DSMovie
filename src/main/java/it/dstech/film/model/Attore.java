@@ -1,5 +1,6 @@
 package it.dstech.film.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +10,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Attori")
-public class Attore {
+public class Attore implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8545746463086619793L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "attore_id")
@@ -40,5 +45,4 @@ public class Attore {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-
 }

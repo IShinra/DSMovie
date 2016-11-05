@@ -1,5 +1,7 @@
 package it.dstech.film.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Generi")
-public class Genere {
+public class Genere implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8994447702601109543L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "genere_id")
